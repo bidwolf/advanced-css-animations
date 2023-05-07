@@ -1,8 +1,10 @@
 import "@styles/_aula-05.scss"
 import { forwardRef } from "react";
-const CursorComponent=forwardRef<HTMLDivElement>((_props,ref) =>{
-    
-    return ( <div id="cursor" ref={ref}></div> );
+interface ICursorComponentProps{
+    isVisible:boolean
+}
+const CursorComponent=forwardRef<HTMLDivElement,ICursorComponentProps>(({isVisible}:ICursorComponentProps,ref) =>{
+    return ( <div id="cursor" className={!isVisible?"invisible":""} ref={ref}></div> );
 })
 
 export default CursorComponent;
