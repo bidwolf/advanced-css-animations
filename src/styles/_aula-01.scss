@@ -1,10 +1,11 @@
 @import './variables';
 @import './mixins';
-
-.hexagon{
+/* hexagon has been added on first lesson */
+%shared-hexagon{
     width:120px;
     height:100px;
-    background:#FFF;
+    background: $primary-color;
     position: relative;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    
 }
