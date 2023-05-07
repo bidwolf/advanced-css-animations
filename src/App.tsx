@@ -1,6 +1,6 @@
 import '@styles/App.css'
-// import { Hexagon,LightedHexagon } from './components/Hexagon'
-import {HoveredHexagonEffect} from './components/Hexagon'
+// import { Hexagon,LightedHexagon,HoveredHexagonEffect} from './components/Hexagon'
+import {StrokeHexagonEffect} from './components/Hexagon'
 
 function App() {
   return (
@@ -9,9 +9,10 @@ function App() {
       /*
       <Hexagon/>
       <LightedHexagon/>
+      <HoveredHexagonEffect/>
       */
       }
-      <HoveredHexagonEffect/>
+      <StrokeHexagonEffect/>
     </>
   )
 }
