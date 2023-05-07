@@ -1,7 +1,7 @@
 @import './aula-03';
-.hexagon{
+%shared-hexagon-stroke-beehive{
     @extend %shared-hexagon-beehive;
-    &::after{
+    &:after{
         content:'';
         position: absolute;
         top:3px;
