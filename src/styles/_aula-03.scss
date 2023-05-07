@@ -9,7 +9,7 @@
 }
 %shared-hexagon-beehive{
     @extend %shared-hexagon-lighted;
-    &::before{
+    &:before{
         content: "";
         position: absolute;
         top: 0;
@@ -21,14 +21,15 @@
         z-index: 500;
     }
     transition: 2s;
+    /* To use it in stroke-cursor-onMouseMove animation we have to remove this
     &:hover{
         transition: 0s;
         background: $primary-color;
-    }
+    } */
 }
 .container{
     position: relative;
     overflow: hidden;
     height: 100vh;
-    @include animate(light,4s,linear,infinite);
+    z-index: 2;
 }
