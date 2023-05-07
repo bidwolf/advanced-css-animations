@@ -3,7 +3,7 @@
     NOTE: The polygon color cannot be white or black, because rotate this color using filter dont make any changes! 
 */
 
-.hexagon {
+%shared-hexagon-lighted {
     @extend %shared-hexagon;
     &-light{
         @include keyframes(light){

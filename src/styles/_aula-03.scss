@@ -1,0 +1,33 @@
+@import './aula-02';
+.row{
+    display: inline-flex;
+    margin-top: -32px;
+    margin-left: -50px;
+    &:nth-child(even){
+        margin-left: 1px;
+    }
+}
+.hexagon{
+    @extend %shared-hexagon-lighted;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 50%;
+        pointer-events: none;
+        background:rgba( 255,255,255, .03);
+    }
+    transition: 2s;
+    &:hover{
+        transition: 0s;
+        background: $primary-color;
+    }
+}
+.container{
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    @include animate(light,4s,linear,infinite);
+}

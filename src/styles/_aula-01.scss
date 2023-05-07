@@ -2,10 +2,10 @@
 @import './mixins';
 /* hexagon has been added on first lesson */
 %shared-hexagon{
-    width:120px;
-    height:100px;
-    background: $primary-color;
+    width:100px;
+    height:110px;
+    background: #111;
+    margin: 1px;
     position: relative;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
