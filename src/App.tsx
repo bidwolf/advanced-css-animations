@@ -10,6 +10,7 @@ import {
 import Card from './components/Card'
 import Wavy from './components/Wavy'
 import ScrollingText from './components/ScrollingText'
+import RainComponent from './components/Rain'
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
       </Card>
       <Card title={"aula-07"} key={"7"}>
        <ScrollingText/>
+      </Card>
+      <Card title={"aula-08"} key={"8"}>
+       <RainComponent/>
       </Card>
       
     </div>
