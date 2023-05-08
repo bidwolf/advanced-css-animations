@@ -9,6 +9,7 @@ import {
 
 import Card from './components/Card'
 import Wavy from './components/Wavy'
+import ScrollingText from './components/ScrollingText'
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
       
       <Card title={"aula-06"} key={"6"}>
        <Wavy/>
+      </Card>
+      <Card title={"aula-07"} key={"7"}>
+       <ScrollingText/>
       </Card>
       
     </div>

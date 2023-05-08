@@ -15,4 +15,6 @@
     &-light{
         @include animate(light,4s,linear,infinite);
     }
+    top: 40%;
+    left: 40%;
 }

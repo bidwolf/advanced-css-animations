@@ -30,7 +30,7 @@ body {
 .card{
   position: relative;
   border-radius: 1rem;
-  height: 40vh;
+  height: $card-height;
   overflow: hidden;
   aspect-ratio: 1/1;
   border: 1px solid rgba($color: #FFFFFF, $alpha: 0.4);
@@ -39,9 +39,12 @@ body {
     position: absolute;
     top: 0;
     left: 50%;
+    width: $card-height;
+    text-align: center;
     transform: translateX(-50%);
     font-size: x-large;
     z-index: 10;
+    background-color: rgba($color: #000000, $alpha: 0.8);
   }
 }
 @include keyframes(light){
@@ -67,5 +70,27 @@ body {
   50%{
     
     transform: translateZ(100px);
+  }
+}
+@include keyframes(scrolling){
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+@include keyframes(wavy-lighted){
+  0%{
+    transform: translateZ(-100px);
+    
+  }
+  50%{
+    
+    transform: translateZ(100px);
+  }
+  100%{
+    transform: translateZ(-100px);
+    filter:hue-rotate(360deg);
   }
 }
