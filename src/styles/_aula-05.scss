@@ -16,7 +16,7 @@
         @include animate(light-blur,4s,linear,infinite);
 }
 .hexagon{
-    @extend %shared-hexagon-stroke-beehive;
+    @extend %shared-hexagon-stroke-beehive !optional;
     &::after{
         all: unset;
     }
