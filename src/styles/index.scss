@@ -60,3 +60,12 @@ body {
       filter: hue-rotate(360deg) blur(5px);
   }
 }
+@include keyframes(wavy){
+  0%,100%{
+    transform: translateZ(-100px);
+  }
+  50%{
+    
+    transform: translateZ(100px);
+  }
+}

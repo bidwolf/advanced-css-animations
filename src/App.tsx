@@ -8,6 +8,7 @@ import {
   }from './components/Hexagon'
 
 import Card from './components/Card'
+import Wavy from './components/Wavy'
 
 function App() {
   return (
@@ -27,6 +28,11 @@ function App() {
       <Card title={"aula-05"} key={"5"}>
        <StrokedBlurEffect/>
       </Card>
+      
+      <Card title={"aula-06"} key={"6"}>
+       <Wavy/>
+      </Card>
+      
     </div>
     
   )

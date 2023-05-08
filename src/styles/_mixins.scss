@@ -12,3 +12,17 @@
             @content;
         }
     }
+    @mixin evenlyPositions($value){
+        left: $value;
+        top: $value;
+        right: $value;
+        bottom: $value;
+    }
+    @mixin wavyChildEffect($from,$to){
+        @for $i from $from through $to {
+            &:nth-child(#{$i}) {
+              @include evenlyPositions(#{$i * 10 + 10}px); // create a circle with $index * 10 + 10 diameter
+              animation-delay: #{1.4 + math.div($i,10) - 0.1}s; // apply a delay on movement in z-index that scales from the bottom to the top
+            }
+          }
+    }
