@@ -20,5 +20,6 @@
         border-radius: $radius-full;
         @include wavyChildEffect(1,11);
         @include animate(wavy,3s,ease-in-out,infinite);
+
     }
 }

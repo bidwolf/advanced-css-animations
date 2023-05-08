@@ -1,0 +1,39 @@
+@use "sass:math";
+@import './variables';
+@import './mixins';
+
+.scrolling{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    &-container{
+        position: relative;
+        width: 50%;
+        background: $primary-color;
+        overflow: hidden;
+        &:nth-child(1){
+            position: relative;
+            width: 50%;
+            background: url(/resources/img/kids-learning.jpg);
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            & h2{
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 2px;
+                -webkit-text-stroke-color: #fff;
+                left: 100%;
+            }
+        }
+    }
+    &-title{
+        color: #fff;
+        position: absolute;
+        white-space: nowrap;
+        font-size: 2em;
+        line-height: $card-height;
+        @include animate(scrolling,60s,linear,infinite);
+    }
+}
