@@ -1,19 +1,18 @@
 @import './aula-01';
 /*  hexagon-light has been added on second lesson
-    NOTE: The polygon color cannot be white or black, because rotate this color using filter dont make any changes! 
+    NOTE: The polygon color cannot be white or black, because rotate this color using filter don't make any changes! 
 */
 
 %shared-hexagon-lighted {
     @extend %shared-hexagon;
     &-light{
-        @include keyframes(light){
-            0%{
-                filter: hue-rotate(0deg);
-            }
-            100%{
-                filter:hue-rotate(360deg);
-            }
-        }
+        @include animate(light,4s,linear,infinite);
+    }
+}
+.hexagon-02{ // O mesmo que o de cima porque esse é utilizado no componente da aula-02
+    @extend %shared-hexagon;
+    background-color: $primary-color;
+    &-light{
         @include animate(light,4s,linear,infinite);
     }
 }

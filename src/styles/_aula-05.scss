@@ -1,0 +1,23 @@
+@import './aula-04'; 
+#cursor{
+    height: 40%;
+    aspect-ratio: 1/1;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    background: $primary-color;
+    border-radius: $radius-full;
+    z-index: 0;
+    &.invisible{
+        opacity: 0;
+        visibility: hidden;
+    }
+        @include animate(light-blur,4s,linear,infinite);
+}
+.hexagon{
+    @extend %shared-hexagon-stroke-beehive;
+    &::after{
+        all: unset;
+    }
+}

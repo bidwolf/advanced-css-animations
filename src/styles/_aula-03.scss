@@ -1,15 +1,17 @@
+@use "sass:math";
+
 @import './aula-02';
 .row{
     display: inline-flex;
-    margin-top: -32px;
-    margin-left: -50px;
+    margin-top: math.div($hexagon-height,-3.4375);
+    margin-left: math.div($hexagon-width,-2);
     &:nth-child(even){
         margin-left: 1px;
     }
 }
 %shared-hexagon-beehive{
     @extend %shared-hexagon-lighted;
-    &::before{
+    &:before{
         content: "";
         position: absolute;
         top: 0;
@@ -21,14 +23,25 @@
         z-index: 500;
     }
     transition: 2s;
+    /* To use it in stroke-cursor-onMouseMove animation we have to remove this
     &:hover{
         transition: 0s;
         background: $primary-color;
-    }
+    } */
+}
+.hexagon-03{
+    @extend %shared-hexagon-beehive;
+    @include animate(light,4s,linear,infinite);
+    transition: 2s;
+    &:hover{
+        transition: 0s;
+        background: $primary-color;
+    } 
+    
 }
 .container{
     position: relative;
     overflow: hidden;
-    height: 100vh;
-    @include animate(light,4s,linear,infinite);
+    height: 100%;
+    z-index: 2;
 }
