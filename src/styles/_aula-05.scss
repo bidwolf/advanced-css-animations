@@ -1,21 +1,17 @@
 @import './aula-04'; 
 #cursor{
-    width: 200px;
+    height: 40%;
+    aspect-ratio: 1/1;
     top: 0;
     left: 0;
-    height: 200px;
     position: absolute;
     transform: translate(-50%,-50%);
     background: $primary-color;
     border-radius: $radius-full;
-    z-index: 1;
-    @include keyframes(light-blur){
-        0%{
-            filter: hue-rotate(0deg) blur(50px);
-        }
-        100%{
-            filter: hue-rotate(360deg) blur(50px);
-        }
+    z-index: 0;
+    &.invisible{
+        opacity: 0;
+        visibility: hidden;
     }
         @include animate(light-blur,4s,linear,infinite);
 }
