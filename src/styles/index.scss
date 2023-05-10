@@ -12,9 +12,13 @@
   padding: 0;
   margin: 0;
 }
-body {
+#root {
   min-height: 100vh;
-  padding-inline:1rem ;
+  display: flex;
+  flex-direction: column;
+}
+#main{
+  flex: 1;
 }
 .app{
   padding-top: 2rem;
@@ -47,6 +51,19 @@ body {
     background-color: rgba($color: #000000, $alpha: 0.8);
   }
 }
+.container{
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  z-index: 2;
+  &-loader{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 @include keyframes(light){
   0%{
       filter: hue-rotate(0deg);
@@ -64,12 +81,20 @@ body {
   }
 }
 @include keyframes(wavy){
-  0%,100%{
+  0%{
     transform: translateZ(-100px);
+    filter:hue-rotate(0deg);
+
   }
+
   50%{
-    
     transform: translateZ(100px);
+  }
+
+  100%{
+    transform: translateZ(-100px);
+    filter:hue-rotate(360deg);
+
   }
 }
 @include keyframes(scrolling){
@@ -82,15 +107,16 @@ body {
 }
 @include keyframes(wavy-lighted){
   0%{
-    transform: translateZ(-100px);
-    
+    transform: translateZ(-100px) ;
+    filter:hue-rotate(0deg);
+
   }
   50%{
     
-    transform: translateZ(100px);
+    transform: translateZ(100px) ;
   }
   100%{
-    transform: translateZ(-100px);
+    transform: translateZ(-100px) ;
     filter:hue-rotate(360deg);
   }
 }
