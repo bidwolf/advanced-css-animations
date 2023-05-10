@@ -1,0 +1,60 @@
+@import './variables';
+@import './mixins';
+.btn{
+    padding: .5rem 2rem;
+    color: $text-default;
+    background: rgba($color: $primary-color, $alpha: 1.0) ;
+    border: 1px solid inherit;
+    border-radius: .25rem;
+    &-link{
+        text-decoration: none;
+        border-color: transparent;
+        background: transparent;
+        transition: all .1s ease-in-out;
+        &:hover{
+            background: rgba($color: #fff, $alpha: .1);
+        }
+    }
+}
+.navbar{
+    background-color: rgba($color: #fff, $alpha: 0.2);
+    border-bottom: 1px solid rgba($color: $primary-color, $alpha:0.2);
+    padding-block: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &>#course{
+        color: $primary-color;
+        opacity: .8;
+        padding-left: 1rem;
+        font-size: 1rem;
+        & a{
+            transition: opacity .1s ease-in-out;
+            text-decoration: none;
+            &:visited{
+                color: $primary-color;
+            }
+    }}
+    &-list{
+        display: flex;
+        gap:1rem;
+        justify-content: end;
+        align-items: center;
+    &-item{
+        list-style: none;
+        & .active{
+            color: $primary-color;
+        }
+    }
+    }
+}
+#footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba($color: $primary-color, $alpha: .04);
+    padding-block: 1rem;
+    border-top: 1px solid rgba($color:#fff,$alpha: .04);
+  }
