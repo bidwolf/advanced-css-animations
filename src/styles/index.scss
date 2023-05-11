@@ -1,6 +1,6 @@
 @import './variables';
 @import './mixins';
-
+@import './animations';
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color-scheme: light dark;
@@ -17,19 +17,28 @@
   display: flex;
   flex-direction: column;
 }
-#main{
-  flex: 1;
-}
+
 .app{
   padding-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
   width: 100%;
   align-items: center;
   justify-items: center;
   position: relative;
   gap: 2rem;
   overflow: hidden;
+  grid-template-columns: repeat(1,1fr);
+  @include breakpoint(tablet){
+    grid-template-columns: repeat(2,1fr);
+  }
+  @include breakpoint(desktop){
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+#main{
+  width: 100%;
+  min-height: 100vh;
+  margin-bottom: 2rem;
 }
 .card{
   position: relative;
@@ -63,68 +72,19 @@
     align-items: center;
   }
 }
-
-@include keyframes(light){
-  0%{
-      filter: hue-rotate(0deg);
-  }
-  100%{
-      filter:hue-rotate(360deg);
-  }
-}
-@include keyframes(light-blur){
-  0%{
-      filter: hue-rotate(0deg) blur(5px);
-  }
-  100%{
-      filter: hue-rotate(360deg) blur(5px);
-  }
-}
-@include keyframes(wavy){
-  0%{
-    transform: translateZ(-100px);
-    filter:hue-rotate(0deg);
-
-  }
-
-  50%{
-    transform: translateZ(100px);
-  }
-
-  100%{
-    transform: translateZ(-100px);
-    filter:hue-rotate(360deg);
-
-  }
-}
-@include keyframes(scrolling){
-  0%{
-    transform: translateX(0);
-  }
-  100%{
-    transform: translateX(-100%);
-  }
-}
-@include keyframes(wavy-lighted){
-  0%{
-    transform: translateZ(-100px) ;
-    filter:hue-rotate(0deg);
-
-  }
-  50%{
-    
-    transform: translateZ(100px) ;
-  }
-  100%{
-    transform: translateZ(-100px) ;
-    filter:hue-rotate(360deg);
-  }
-}
-@include keyframes(rain){
-  0%{
-    background-position: 0 0;
-  }
-  100%{
-    background-position: 20% 100%;
+.btn{
+  padding: .5rem 2rem;
+  color: $text-default;
+  background: rgba($color: $primary-color, $alpha: 1.0) ;
+  border: 1px solid inherit;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
+  &-link{
+      text-decoration: none;
+      border-color: transparent;
+      background: transparent;
+      &:hover{
+          background: rgba($color: #fff, $alpha: .1);
+      }
   }
 }
