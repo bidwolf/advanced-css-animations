@@ -1,44 +1,32 @@
 import '@styles/App.css'
-import { 
-  Hexagon,
-  LightedHexagon,
-  HoveredHexagonEffect,
-  StrokedBlurEffect,
-  StrokeHexagonEffect
-  }from '../../components/Hexagon'
-
 import Card from '../../components/Card'
-import Wavy from '../../components/Wavy'
-import ScrollingText from '../../components/ScrollingText'
-import RainComponent from '../../components/Rain'
-
 function FirstSectionPage() {
   return (
     <div className="app">
       <Card title={"aula-01"} key={"1"}>
-        <Hexagon/>
+      {/* Too much animations can grow up lag on it, we use gifs or something like that */}
       </Card>
       <Card title={"aula-02"} key={"2"}>
-        <LightedHexagon/>
+      {/* Too much animations can grow up lag on it, we use gifs or something like that */}
       </Card>
       <Card title={"aula-03"} key={"3"}>
-        <HoveredHexagonEffect/>
+      {/* Too much animations can grow up lag on it, we use gifs or something like that */}
       </Card>
       <Card title={"aula-04"} key={"4"}>
-        <StrokeHexagonEffect/>
+      {/* Too much animations can grow up lag on it, we use gifs or something like that */}
       </Card>
       <Card title={"aula-05"} key={"5"}>
-       <StrokedBlurEffect/>
+      {/* Too much animations can grow up lag on it, we use gifs or something like that */}
       </Card>
       
       <Card title={"aula-06"} key={"6"}>
-       <Wavy/>
+      {/* Too much animations can grow up lag on it, we use gifs or something like that */}
       </Card>
       <Card title={"aula-07"} key={"7"}>
-       <ScrollingText/>
+      {/* Too much animations can grow up lag on it, we use gifs or something like that */}
       </Card>
       <Card title={"aula-08"} key={"8"}>
-       <RainComponent/>
+      {/* Too much animations can grow up lag on it, we use gifs or something like that */}
       </Card>
       
     </div>
