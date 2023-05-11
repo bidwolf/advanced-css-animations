@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin vertical-list {
     display: flex;
     align-items: center;
@@ -8,15 +10,29 @@
         animation: $animation $duration $method $times;
     }
     @mixin keyframes($name){
-        @keyframes #{$name}{
+        @-webkit-keyframes #{$name} {
             @content;
-        }
+          }
+          @-moz-keyframes #{$name} {
+            @content;
+          }
+          @keyframes #{$name} {
+            @content;
+          }
     }
     @mixin evenlyPositions($value){
         left: $value;
         top: $value;
         right: $value;
         bottom: $value;
+    }
+    @mixin childDownChainEffect($childLength,$animation,$duration,$method,$times,$animation-delay){
+      @for $i from 1 through $childLength{
+         &:nth-child(#{$i}){
+            @include animate($animation,$duration,$method,$times);
+            animation-delay: #{$animation-delay * ($childLength - $i)};
+         }
+      }
     }
     @mixin wavyChildEffect($from,$to){
         @for $i from $from through $to {
@@ -26,3 +42,21 @@
             }
           }
     }
+    // This will create some breakpoints for use based on the $point that we are using
+    @mixin breakpoint($point) {
+        @if $point == desktop {
+           @media only screen and (min-width: $desktop) { // the breakpoint 
+              @content; // whatever you want to be able to
+           }
+        } 
+        @else if $point == tablet {
+           @media only screen and (min-width: $tablet) {
+              @content; 
+           }
+        } 
+        @else if $point == mobile {
+           @media only screen and (min-width: $mobile) {
+              @content;
+           }
+        }
+     }
