@@ -1,0 +1,57 @@
+@import './variables';
+@import './mixins';
+#navbar-toggle {
+    cursor: pointer;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    overflow: hidden;
+    background: transparent;
+    position: relative;
+    @include breakpoint(tablet){
+        grid-column-start: 6;
+        grid-column-end: 7;
+    }
+    &[aria-expanded="true"]{
+        & span{
+            &:nth-child(1){
+                transform: rotateZ(45deg);
+                transform-origin: 50% 50%;
+                top: 40%;
+            }
+            &:nth-child(2){
+                transform: translateX(-100%);
+                visibility: hidden;
+                opacity: 0;
+            }
+            &:nth-child(3){
+                top: 40%;
+                transform: rotateZ(-45deg) ;
+                transform-origin: 50% 50% ;
+            }
+        }
+        opacity: .8;
+    }
+    & span{
+        transition: transform 500ms ease-in-out;
+
+        position: absolute;
+        &:nth-child(1){
+            top: 20%;
+        }
+        &:nth-child(2){
+            top: 40%;
+            opacity: 1;
+        }
+        &:nth-child(3){
+            top: 60%;
+        }
+        pointer-events: none;
+    }
+  }
