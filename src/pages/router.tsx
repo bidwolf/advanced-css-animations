@@ -4,7 +4,7 @@ import {
     RouterProvider,
   } from "react-router-dom"
 import Root from "./root";
-import FirstSectionPage from "./sections/FirstSection";
+import SectionPage from "./sections/SectionPage";
 import { Hexagon, HoveredHexagonEffect, LightedHexagon, StrokedBlurEffect, StrokeHexagonEffect } from "../components/Hexagon";
 import SectionRoot from "./sections";
 import Wavy from "../components/Wavy";
@@ -31,31 +31,31 @@ import RainComponent from "../components/Rain";
         element:<section id="section-1" ><Outlet/></section>,
         children:[
           {
-            index:true,element:<FirstSectionPage/>
+            index:true,element:<SectionPage sectionId="1"/>
           },
           {
-            path:'lesson/aula-01/',
+            path:'lesson/1/',
             element:<Hexagon/>,
           },{
-            path:'lesson/aula-02/',
+            path:'lesson/2/',
             element:<LightedHexagon/>
           },{
-            path:'lesson/aula-03/',
+            path:'lesson/3/',
             element:<HoveredHexagonEffect/>
           },{
-            path:'lesson/aula-04/',
+            path:'lesson/4/',
             element:<StrokeHexagonEffect/>
           },{
-            path:'lesson/aula-05/',
+            path:'lesson/5/',
             element:<StrokedBlurEffect/>
           },{
-            path:'lesson/aula-06/',
+            path:'lesson/6/',
             element:<Wavy/>
           },{
-            path:'lesson/aula-07/',
+            path:'lesson/7/',
             element:<ScrollingText/>
           },{
-            path:'lesson/aula-08/',
+            path:'lesson/8/',
             element:<RainComponent/>
           }
         ]

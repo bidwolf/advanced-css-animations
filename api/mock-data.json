@@ -1,0 +1,52 @@
+{
+    "data":[
+        {
+            "lessonId":"1",
+            "title":"Hexagon lesson",
+            "imgUrl":"https://i.ibb.co/sjWXP5N/chapter-01.png",
+            "sectionId":"1"
+        },
+        {
+            "lessonId":"2",
+            "title":"Hexagon lesson with color animation",
+            "imgUrl":"https://i.ibb.co/Syf0GMW/chapter-02.png",
+            "sectionId":"1"
+        },
+        {
+            "lessonId":"3",
+            "title":"Beehive like wall with color animation on hover",
+            "imgUrl":"https://i.ibb.co/PT26wM3/chapter-03.png",
+            "sectionId":"1"
+        },
+        {
+            "lessonId":"4",
+            "title":"Beehive like wall with stroke color animation on hover",
+            "imgUrl":"https://i.ibb.co/GMRw4fj/chapter-04.png",
+            "sectionId":"1"
+        },
+        {
+            "lessonId":"5",
+            "title":"Beehive like wall with color animation on hover with a pointer effect",
+            "imgUrl":"https://i.ibb.co/GvPpg0f/chapter-05.png",
+            "sectionId":"1"
+        },
+        {
+            "lessonId":"6",
+            "title":"Like hooked effect",
+            "imgUrl":"https://i.ibb.co/16Ghk8q/chapter-06.png",
+            "sectionId":"1"
+        },
+        {
+            "lessonId":"7",
+            "title":"Rain animation effect",
+            "imgUrl":"https://i.ibb.co/XZqn5SY/chapter-07.png",
+            "sectionId":"1"
+        },
+        {
+            "lessonId":"8",
+            "title":"Letter animation that changes stroke color on different sections",
+            "imgUrl":"https://i.ibb.co/Dp6Yx1L/chapter-08.png",
+            "sectionId":"1"
+        }
+    ]
+}

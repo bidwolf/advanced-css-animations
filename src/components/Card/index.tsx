@@ -1,13 +1,14 @@
-import { FC, Key, ReactNode } from "react";
+import { FC, ReactNode } from "react";
 import { Link } from "react-router-dom";
 interface ICardProps{
+    lessonId:string
     title:string
     children:ReactNode
 }
-const Card:FC<ICardProps>=({children,title}:ICardProps) =>{
+const Card:FC<ICardProps>=({children,title,lessonId}:ICardProps) =>{
  
     return (
-        <Link to={`lesson/${title}`}>
+        <Link to={`lesson/${lessonId}`}>
         <div className="card" >
             <h1 className='card-title'>{title}</h1>
             {children}
