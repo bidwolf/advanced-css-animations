@@ -1,9 +1,10 @@
 @import './variables';
 @import './mixins';
-.container{
+.home-container{
     display: flex;
     flex-direction: column;
     margin-inline-end: 1rem;
+    position: relative;
     @include breakpoint(desktop){
         display: grid;
         grid-template-columns: 40% 60%;
@@ -11,29 +12,32 @@
     & .sidebar{
         display: none;
         @include breakpoint(desktop){
-            height: 100vh;
             display: flex;
             position: relative;
             flex-direction: column;
             background-color: rgba($color: #ffffff, $alpha: .1);
             border-right: 1px solid rgba($color: #ffffff, $alpha: .05);
-            padding: 1rem;
-            gap: 1rem;
+            padding: .5rem;
+            gap: .5rem;
+            height: 100%;
             @include animate(from-left,1s,ease,1);
             &.hidden{
                 @include animate(to-left,1s,ease,1);
                 opacity: 0;
                 transform: translateX(-100%);
+                width: 40%;
+                height: 100%;
+                position: fixed;
                 &~.article{
-                    transform: translateX(-30%);
-                    transition: all 1s ease;
+                    grid-column: 2 span;
+                    @include animate(from-right,1s,ease,1);
                 }
             }
             &>.right-arrow
             {
                 position: absolute;
-                right: 1rem;
-                top:1rem;
+                right: .5rem;
+                top:.5rem;
                 opacity: .8;
                 &:hover{
                     cursor: pointer;
@@ -152,6 +156,20 @@
                 &.git:hover::after{
                     content:'Git';
                     background-color: #F4511E;
+                }
+                &.github:hover::after{
+                    content:'Github';
+                    background-color: #000000;
+                    color: #ffffff;
+                }
+                &.mail:hover::after{
+                    content:'send email';
+                    background-color: #8A02B2;
+                    color: #ffffff;
+                }
+                &.linkedin:hover::after{
+                    content:'linkedin';
+                    background-color: #0288D1;
                 }
             }
         }
