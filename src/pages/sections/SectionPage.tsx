@@ -1,4 +1,3 @@
-import '@styles/App.css'
 import Card from '../../components/Card'
 import { useSection } from '../../hooks/useSection'
 type TSectionProps={
@@ -13,9 +12,9 @@ function FirstSectionPage({sectionId}:TSectionProps) {
           <>
           {
             section.map((section)=>(
-              <Card title={section.title} key={`lesson-${section.lessonId}`} lessonId={section.lessonId}>
+              <Card.Lesson title={section.title} key={`lesson-${section.lessonId}`} lessonId={section.lessonId}>
                 <img src={section.imgUrl} alt={section.title} className='card-image'/>
-              </Card>
+              </Card.Lesson>
             ))
           }
       </>

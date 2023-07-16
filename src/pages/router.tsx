@@ -10,6 +10,7 @@ import SectionRoot from "./sections";
 import Wavy from "../components/Wavy";
 import ScrollingText from "../components/ScrollingText";
 import RainComponent from "../components/Rain";
+import { Home } from "./home";
 
   const router = createBrowserRouter([
     {
@@ -17,6 +18,10 @@ import RainComponent from "../components/Rain";
       element:<Root/> ,
       errorElement:<div><h1>NOT FOUND</h1></div>, //TODO: CREATE ERROR ELEMENT
       children:[
+        {
+          path:"/",
+          element:<Home/>
+        },
        {
         path:"section/",
         element:<div>HA YEYE Pegadita</div>,

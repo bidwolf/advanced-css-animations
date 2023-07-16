@@ -12,7 +12,7 @@ const [isLoading,setLoading]=useState(true)
 const [error,setError]=useState<Error|undefined>()
 const fetchData = useCallback(()=>{
     const currentSection = data.data.filter(section=>section.sectionId===sectionId)
-    if(currentSection.length==0)setError(new Error("this section don't have any lessons yet"))
+    if(currentSection.length==0) setError(new Error("this section don't have any lessons yet"))
     setSection(currentSection)
     setLoading(false)
 },[sectionId,data])
