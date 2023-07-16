@@ -10,6 +10,9 @@ import { ReactComponent as CssIcon } from "@assets/css.svg";
 import { ReactComponent as JavascriptIcon } from "@assets/javascript.svg";
 import { ReactComponent as GitIcon } from "@assets/git.svg";
 import { ReactComponent as CsharpIcon } from "@assets/csharp.svg";
+import { ReactComponent as GithubIcon } from "@assets/github.svg";
+import { ReactComponent as MailIcon } from "@assets/mail.svg";
+import { ReactComponent as LinkedinIcon } from "@assets/linkedin.svg";
 
 const techs: ITechCardProps[] = [
   {
@@ -37,7 +40,7 @@ const techs: ITechCardProps[] = [
 export function Home() {
     const [isSidebarVisible,setToggleSidebarVisibility]=useState(true);
   return (
-    <div className="container">
+    <div className="home-container">
       <aside className={`sidebar ${isSidebarVisible?"":"hidden"}`}>
         <div 
         className="right-arrow"
@@ -46,9 +49,8 @@ export function Home() {
         <h2 className="sidebar-title">About me</h2>
         <div className="sidebar-profile"/>
         <p>
-          Hi! I'm <strong>Henrique Rodrigues</strong>, Frontend Junior
-          Developer, Electrical Engineer student at CEFET-MG and i'm currently
-          working at PASI in Belo Horizonte, Brazil &#127463;&#127479;.{" "}
+          Hi! My name is <strong>Henrique Rodrigues</strong>, i have 22 years old and i'm Frontend Junior
+          Developer. Actually i'm studying Electrical Engineer at CEFET-MG. Open to work remotely in any where, and in face-to-face at Belo Horizonte, Brazil &#127463;&#127479;.{" "}
         </p>
         <div>
             <h3 className="sidebar-title">My skills</h3>
@@ -91,21 +93,21 @@ export function Home() {
             </ul>
             </div>
           </div>
-            <h3>Contact me</h3>
-            <ul>
-              <li>
+            <h3 className="sidebar-title" >Contact me</h3>
+            <ul className="sidebar-list">
                 <a>
-                  <div className="linkedin" />
+              <li className="sidebar-icon linkedin">
+                  <LinkedinIcon/>
+              </li>
+                </a>
+              <li className="sidebar-icon github">
+                <a>
+                  <GithubIcon/>
                 </a>
               </li>
-              <li>
+              <li className="sidebar-icon mail">
                 <a>
-                  <div className="github" />
-                </a>
-              </li>
-              <li>
-                <a>
-                  <div className="email" />
+                  <MailIcon/>
                 </a>
               </li>
             </ul>
